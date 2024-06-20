@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
-    <link rel="stylesheet" href="CSS/all.min.css">
+    <!-- <link rel="stylesheet" href="CSS/all.min.css"> -->
     <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -53,19 +53,30 @@
 <!-- small container -->
  <div class="small-container">
     <div class="post">
-       <a href="#"><h4>Latest Artwork -></h4></a> 
+      
+       <a href="#"><h4>Latest Artwork </h4></a> 
         <img src="images/latest/photo_1_2024-06-16_03-25-33.jpg" alt="not found" srcset="">
-        <nav><span></span><span></span><span></span></nav>
+        
+      <a href="" style="display: block;">view post -></a>
+
     </div>
-    <div class="post">
+    <div class="post gallary">
+     
+     
        <a href="gallary.html"><h4>Gallary -></h4></a> 
-        <img src="images/gallary/we2.jpg" alt="not found" srcset="">
-        <nav><span></span><span></span><span></span></nav>
+        <img src="images/gallary/1.jpg" alt="not found" srcset="">
+        <!-- <div>
+            <div class="l aro"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="r aro"><i class="fa-solid fa-chevron-right"></i></div>
+        </div> -->
+      
+
     </div>
-    <div class="post">
+    <div class="post video">
        <a href="videos.html"><h4>Videos -></h4></a> 
         <video src="videos/11292kkk.mp4" type="video/mp4" muted loop autoplay></video>
-        <nav><span></span><span></span><span></span></nav>
+      <a href="">view video</a>
+
     </div>
  
  </div>
@@ -90,5 +101,30 @@
 
  </footer>
 
+
+ <script >
+    let  slideIndex=0;
+function showSlides(){
+ let slide =document.querySelector('.gallary img');
+ slideIndex++;
+ if(slideIndex==9){
+  slideIndex=1;
+ }
+ 
+  slide.src=`images/gallary/${slideIndex+1}.jpg`;
+
+ 
+
+  setTimeout(showSlides, 3000); // Change slide every 2 seconds (adjust as needed)
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  showSlides();
+});
+
+
+
+</script>
 </body>
 </html>
